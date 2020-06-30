@@ -8,5 +8,4 @@ RUN apt-get install nginx -y
 RUN git clone https://github.com/xiaoqiangnobug/dockernginx.git
 WORKDIR usr/src/dockernginx
 RUN chmod +x /usr/src/dockernginx/run.sh
-RUN /usr/sbin/nginx start
 CMD /usr/src/dockernginx/run.sh
