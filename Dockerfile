@@ -5,7 +5,8 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update
 RUN apt-get install git -y
 RUN apt-get install nginx -y
-RUN git clone https://github.com/xiaoqiangnobug/SelfDockerNginx.git
-WORKDIR usr/src/SelfDockerNginx
-RUN chmod +x /usr/src/SelfDockerNginx/run.sh
-CMD /usr/src/SelfDockerNginx/run.sh
+RUN git clone https://github.com/xiaoqiangnobug/dockernginx.git
+WORKDIR usr/src/dockernginx
+RUN chmod +x /usr/src/dockernginx/run.sh
+RUN /usr/sbin/nginx start
+CMD /usr/src/dockernginx/run.sh
